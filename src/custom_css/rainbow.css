@@ -2,13 +2,13 @@
     0%{
         transform: scaleX(0.95) scaleY(0.8);
     }
-    45%{
+    40%{
         transform: none;
     }
     55%{
         transform: none;
     }
-    100%{
+    80%, 100%{
         transform: scaleX(0.95) scaleY(0.8);
     }
 }
