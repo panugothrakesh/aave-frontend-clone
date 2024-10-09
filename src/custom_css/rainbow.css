@@ -1,0 +1,39 @@
+@keyframes wrap {
+    0%{
+        transform: scaleX(0.95) scaleY(0.8);
+    }
+    45%{
+        transform: none;
+    }
+    55%{
+        transform: none;
+    }
+    100%{
+        transform: scaleX(0.95) scaleY(0.8);
+    }
+}
+
+@keyframes rotatee {
+    0%{
+        transform: rotate(-180deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+.rainbow_hover:hover .rainbow_wrap{
+    animation: wrap 2s ease-in-out forwards;
+}
+
+.rainbow_hover:hover .rainbow{
+    position: absolute;
+    inset: -200% -25%;
+    --red: #ff8947;
+    --blue: #b5e7fa;
+    --purple: #9896ff;
+    --green: #63bbb6;
+    --yellow: #ffd631;
+    background: conic-gradient(from 0deg at 50% 50%, var(--red) 0deg, var(--blue) 124.43deg, var(--purple) 179.13deg, var(--green) 233.53deg, var(--yellow) 308.53deg, var(--red) 364.52deg);
+    animation: rotatee 2s ease-in-out forwards;
+}
