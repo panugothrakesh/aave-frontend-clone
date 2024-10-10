@@ -1,0 +1,15 @@
+  .radar-circle {
+    animation: radar-pulse 2s infinite ease-out both;
+    transform-origin: center;
+  }
+
+  @keyframes radar-pulse {
+    0% {
+      r: 0;
+      opacity: 1;
+    }
+    100% {
+      r: 16;
+      opacity: 0;
+    }
+  }

@@ -1,28 +1,29 @@
   /* Animation for moving the eyes */
   @keyframes eyeMove {
-    10% { transform: translateX(0); }         /* Start at center */
-    16%, 22% { transform: translateX(2.4px); }      /* Move right */
-    28%, 34% { transform: translateX(-2.4px); }     /* Move left */
-    40% { transform: translateX(0); }        /* Return to center */
-    100% { transform: translateX(0); }       /* Pause for the remaining 4s */
+    10% { transform: translateX(0); }
+    16%, 22% { transform: translateX(2.4px); }
+    28%, 34% { transform: translateX(-2.4px); }
+    40% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+  }
+  @keyframes blink {
+    10%,46% { transform: scaleY(1); }
+    48% {transform: scaleY(0);}
+    50% {transform: scaleY(1);}
+    52% {transform: scaleY(0);}
+    54%, 100% {transform: scaleY(1);}
   }
   
-  .morphing-ellipse {
-    width: 6px;
-    height: 6px;
-    background-color: #201D1D;
-    clip-path: ellipse(50% 50% at 50% 50%);
-    transition: clip-path .1s ease-in-out;
+  .logo-eye-left{
+    transform: scaleY(1);
+    animation: blink 5s infinite linear;
   }
-  .morphing-ellipse2 {
-    width: 6px;
-    height: 6px;
-    background-color: #201D1D;
-    clip-path: ellipse(50% 50% at 50% 50%);
-    transition: clip-path .1s ease-in-out;
+  .logo-eye-right {
+    transform: scaleY(1);
+    animation: blink 5s infinite linear;
   }
   
-  .eye-movement {
+  .logo-eyes {
     /* animation: eyeMove 6s cubic-bezier(.5,.18,.93,.84) infinite; */
     animation: eyeMove 5s linear infinite;
     top: 10px;

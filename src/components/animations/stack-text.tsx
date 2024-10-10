@@ -1,16 +1,14 @@
-"use client";
-
 import { useMemo } from "react";
 import { motion, Variants } from "framer-motion";
 
-type FadeTextProps = {
+type StackTextProps = {
   className?: string;
   direction?: "up" | "down" | "left" | "right";
   framerProps?: Variants;
   text: string;
 };
 
-export function FadeText({
+export function StackText({
   direction = "up",
   className,
   framerProps = {
@@ -18,7 +16,7 @@ export function FadeText({
     show: { opacity: 1, transition: { type: "spring", stiffness: 100, damping: 20 } },
   },
   text,
-}: FadeTextProps) {
+}: StackTextProps) {
 
   const directionOffset = useMemo(() => {
     const map = { up: 10, down: -10, left: -10, right: 10 };
@@ -55,7 +53,6 @@ export function FadeText({
       animate="show"
       viewport={{ once: true }}
       variants={FADE_ANIMATION_VARIANTS}
-      style={{ perspective: 100 }}  // Add perspective for 3D effects
     >
       <motion.span className={className}>{text}</motion.span>
     </motion.div>
