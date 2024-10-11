@@ -22,9 +22,9 @@ const config: Config = {
           },
         },
         see: {
-          '0%': { opacity: '0' },
-          '50%': { opacity: '1' },
-        },
+          '0%': { opacity: '0', pointerEvents: 'none' },
+          '50%': { opacity: '1', pointerEvents: 'auto' },
+        },        
         bar1animation: {
           '0%': { transform: 'translateY(420px)' },
           '100%': { transform: 'translateY(220px)' },
@@ -52,7 +52,7 @@ const config: Config = {
       },
       animation: {
         width_height_reveal: '.75s width_height_reveal ease-in-out .5s forwards',
-        see: 'see 2s ease-in-out .25s forwards',
+        see: 'see .75s ease-in-out .25s forwards',
         bar1: 'bar1animation 1s cubic-bezier(.2,.5,.0,1) 1.2s forwards',
         bar2: 'bar2animation 1s cubic-bezier(.2,.5,.0,1) 1.25s forwards',
         bar3: 'bar3animation 1s cubic-bezier(.2,.5,.0,1) 1.3s forwards',

@@ -7,6 +7,7 @@ import "../custom_css/radar.css"
 // import "../custom_css/hero_interaction.css"
 import { StackText } from './animations/stack-text';
 import Bars from './animations/Bars';
+import ParentComponent from './animations/parent_Bar';
 
 const title_animation = ["Access", "the", "full", "power", "of", "DeFi."]
 
@@ -69,12 +70,13 @@ function Hero() {
                     </FadeText>
                 </div>
             </div>
-            <div className='z-0'>
+            {/* <div className='z-0'>
                 <Bars></Bars>
                 <div className='w-full h-1 flex items-center justify-center'>
                     <div className='bg-colorful-bar animate-width_height_reveal max-w-[1082px] h-1 rounded-full'></div>
                 </div>
-            </div>
+            </div> */}
+            <ParentComponent/>
         </section>
     )
 }
