@@ -3,7 +3,7 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Logo from "../../assets/svg_components/Navbar/logo"
-import FlyOutLink from "./Navbar_component/FlyOutLink";
+import FlyOutLink from "./Navbar_components/FlyOutLink";
 
 function Navbar() {
     const sticky = useRef<HTMLDivElement | null>(null);

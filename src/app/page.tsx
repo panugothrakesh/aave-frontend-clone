@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import Navbar from '@/components/Navbar/navbar';
-import Hero from '@/components/hero';
+import Hero from '@/components/Hero/hero';
 
 export default function Home() {
   useEffect(() => {
