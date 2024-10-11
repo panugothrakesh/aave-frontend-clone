@@ -1,5 +1,5 @@
 import React from 'react';
-import Bars from './Bars';
+import Bars from '../animations/Bars';
 
 const ParentComponent = () => {
  return (

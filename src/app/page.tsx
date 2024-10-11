@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import Lenis from 'lenis';
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/Navbar/navbar';
 import Hero from '@/components/hero';
 
 export default function Home() {
