@@ -1,4 +1,3 @@
-"use client";
 import { useLayoutEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
@@ -69,7 +68,6 @@ function Navbar() {
             </header>
         </>
     )
-}
+};
 
-
-export default Navbar
+export default Navbar;

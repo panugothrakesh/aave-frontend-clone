@@ -1,3 +1,4 @@
+import { transcode } from "buffer";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -11,6 +12,30 @@ const config: Config = {
   theme: {
   	extend: {
       keyframes: {
+        send_down1:{
+          "0%": { transform: "translateY(-184px)" },
+          "100%": { transform: "translateY(0px)" },
+        },
+        send_down2:{
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(400px)" },
+        },
+        send_up1:{
+          "0%": { transform: "translateY(0px)" },
+          "100%": { transform: "translateY(-184px)" },
+        },
+        send_up2:{
+          "0%": { transform: "translateY(400px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        toandfro_motion:{
+          '0%, 100%':{
+            transform: 'translateY(-30px)'
+          },
+          '50%':{
+            transform: 'translateY(30px)'
+          }
+        },
         eye_move:{
           '10%': { transform: 'translateX(0)', },
           '16%, 22%': { transform: 'translateX(2.4px)', },
@@ -97,11 +122,16 @@ const config: Config = {
         },
       },
       animation: {
-        blink: 'eye_blink 5s infinite linear;',
+        down1: 'send_down1 .5s ease-in-out both',
+        down2: 'send_down2 .5s ease-in-out both',
+        up1: 'send_up1 .5s ease-in-out both',
+        up2: 'send_up2 .5s ease-in-out forwards',
+        up_down: 'toandfro_motion 4s infinite ease-in-out both',
+        blink: 'eye_blink 5s infinite linear',
         eyes_move: 'eye_move 5s linear infinite',
         rainbow_gradient_rotate: 'rainbow_rotate 2s ease-in-out forwards',
-        rainbow_button_animation: 'rainbow_button_wrap 2s ease-in-out forwards;',
-        radar_circle: 'radar_pulse 2s infinite ease-out both;',
+        rainbow_button_animation: 'rainbow_button_wrap 2s ease-in-out forwards',
+        radar_circle: 'radar_pulse 2s infinite ease-out both',
         width_height_reveal: '.75s width_height_reveal ease-in-out .5s forwards',
         see: 'see .75s ease-in-out .25s forwards',
         bar1: 'bar1animation 1s cubic-bezier(.2,.5,.0,1) 1.2s forwards',
@@ -131,6 +161,7 @@ const config: Config = {
   			backgroundGrayHover: 'var(--background-gray-hover)',
   			trail: 'color(display-p3 .0549 .7255 .2431)',
   			announcements: 'var(--announcements)',
+  			bordercolor: 'var(--border-color)',
   		},
   		fontFamily: {
   			regola: ['var(--font-fs-regola)'],
@@ -144,7 +175,12 @@ const config: Config = {
       },
       width:{
         'calc-100-plus-8': 'calc(100% + 8px)',
-      }
+      },
+      animationDelay: {
+        two: '200ms',
+        three: '400ms',
+        four: '600ms',
+      },
   	}
   },
   plugins: [require("tailwindcss-animate")],

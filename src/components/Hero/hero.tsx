@@ -40,7 +40,7 @@ function Hero() {
                 <div className='max-w-[20em] text-xl'>
                     <FadeText className='text-xl font-normal normal text-primaryParagraph leading-[150%] -tracking-[0.47px]'
                         framerProps={{ show: { transition: { delay: 1.4 } }, }} direction="up">
-                        Aave is the world's largest liquidity protocol. Supply, borrow, swap, stake and more.
+                        Aave is the world<em className='-ml-[3px] mr-[1px]'>'</em>s largest liquidity protocol. Supply, borrow, swap, stake and more.
                     </FadeText>
                 </div>
                 <div>
@@ -55,9 +55,12 @@ function Hero() {
                                 <circle cx="6.5" cy="6.5" r="6.5" fill="#E2E0FF" className=" animate-radar_circle origin-center"></circle>
                                 <circle cx="6.5" cy="6.5" r="3.5" fill="#9896FF"></circle>
                             </svg>
-                            <p className='font-inter text-sm font-normal leading-[135%] -tracking-[0.09px] text-secondaryParagraph'>
+                            <p className='font-inter text-sm font-light leading-[135%] -tracking-[0.09px] text-secondaryParagraph'>
                                 <span className='text-primaryParagraph text-nowrap'>
-                                    &#36; 18.42 billion
+                                    <span className=' tracking-wider'>
+                                    &#36;18.42
+                                        </span>
+                                        &#8203; billion&nbsp;
                                 </span>
                                 of liquidity currently supplied in Aave.
                             </p>

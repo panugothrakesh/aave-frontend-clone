@@ -16,6 +16,8 @@
     
     --primary-paragraph: #636161;
     --secondary-paragraph: #8f8e8e;
+
+    --border-color: color(display-p3 .9451 .9451 .9412);
     
 
     --background-gray: rgb(247, 246, 246);
@@ -32,4 +34,16 @@
 
 div{
     display: block;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(32, 29, 29, 0.15);
+    border-radius: 100px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import Navbar from '@/components/Navbar/navbar';
 import Hero from '@/components/Hero/hero';
+import Meet from '@/components/Meet/Meet';
 
 export default function Home() {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function Home() {
       </div>
       <main className='h-full min-h-[100dvh]'>
         <Hero/>
+        <Meet/>
       </main>
       <div className="text-lg font-regola h-[200vh] relative"></div>
     </div>

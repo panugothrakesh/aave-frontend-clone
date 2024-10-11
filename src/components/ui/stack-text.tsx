@@ -1,5 +1,6 @@
 import { useMemo } from "react";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, useInView } from "framer-motion";
+import { useRef } from "react";
 
 type StackTextProps = {
   className?: string;
@@ -17,6 +18,8 @@ export function StackText({
   },
   text,
 }: StackTextProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0 });
 
   const directionOffset = useMemo(() => {
     const map = { up: 10, down: -10, left: -10, right: 10 };
@@ -42,16 +45,16 @@ export function StackText({
         ...(show ?? {}),
         opacity: show?.opacity ?? 1,
         [axis]: show?.[axis] ?? 0,
-        transform: "rotateX(0deg)  translateY(0%)",
+        transform: "rotateX(0deg) translateY(0%)",
       },
     };
   }, [directionOffset, axis, framerProps]);
 
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
-      animate="show"
-      viewport={{ once: true }}
+      animate={isInView ? "show" : "hidden"}
       variants={FADE_ANIMATION_VARIANTS}
     >
       <motion.span className={className}>{text}</motion.span>
