@@ -9,8 +9,8 @@ function Meet() {
     const [isBorrow, setIsBorrow] = useState(false);
 
     return (
-        <div className='relative py-[100px] pt-[150px] flex flex-col items-center w-full px-24 after:content-[""] after:absolute after:bottom-0 after:max-w-[1082px] after:w-full after:border-bordercolor after:border-b-[1px] after:border-solid'>
-            <div className='relative max-w-[986px] w-full '>
+        <section className='relative py-12 px-5 md:py-[100px] md:pt-[150px] flex flex-col items-center w-full md:px-24 after:content-[""] after:absolute after:bottom-0 after:max-w-[1082px] after:w-full after:border-bordercolor after:border-b-[1px] after:border-solid'>
+            <div className='relative max-w-none md:max-w-[986px] w-full '>
                 <h2 className='flex items-center justify-center gap-2'>
                     {title_animation.map((word, index) => (
                         <StackText
@@ -24,14 +24,14 @@ function Meet() {
                         />
                     ))}
                 </h2>
-                <FadeInOnView transitionDelay={0.5} transitionDuration={1} className='mt-3 text-center font-inter text-xl font-regular leading-[135%] -tracking-[0.33px] text-primaryParagraph'>
+                <FadeInOnView transitionDelay={0.5} transitionDuration={1} className='mt-3 text-center font-inter text-lg md:text-xl font-regular leading-[135%] -tracking-[0.33px] text-primaryParagraph'>
                     Earn interest and borrow assets.
                 </FadeInOnView>
 
                 <Meet_Interaction isSupply={isSupply} isBorrow={isBorrow} />
                 
-                <div className='overflow-hidden h-auto mt-24 '>
-                    <div className={`grid gap-x-12 px-6 duration-300 ease transition-all ${isBorrow ? "grid-cols-[4fr_11fr]" : "grid-cols-[11fr_4fr]"}`}>
+                <div className='overflow-hidden h-auto mt-12 md:mt-24 '>
+                    <div className={`grid gap-x-12 md:px-6 duration-300 ease transition-all ${isBorrow ? "grid-cols-[4fr_11fr]" : "grid-cols-[11fr_4fr]"}`}>
                         <button className='flex flex-col gap-y-4 h-fit bg-none text-start text-inherit'
                             onClick={() => {
                                 setIsSupply(true)
@@ -62,7 +62,7 @@ function Meet() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

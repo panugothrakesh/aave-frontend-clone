@@ -11,11 +11,17 @@ function Navbar() {
     const sticky = useRef<HTMLDivElement | null>(null);
     const [isMenu, setIsMenu] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
+    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        if (sticky.current) {
+        const updateScreenSize = () => {
+            setIsLargeScreen(window.innerWidth >= 768);
+        };
+
+        window.addEventListener('resize', updateScreenSize);
+        if (sticky.current && isLargeScreen) {
             gsap.to(sticky.current, {
                 scrollTrigger: {
                     trigger: document.documentElement,
@@ -33,7 +39,7 @@ function Navbar() {
                 },
             });
         }
-    }, []);
+    }, [isLargeScreen]);
 
     return (
         <>
@@ -82,8 +88,8 @@ function Navbar() {
                 </button>
 
             </header>
-            <div className={`block md:hidden z-[9999999] fixed inset-0 top-16 overflow-y-scroll px-3 pt-6 pb-16 bg-white duration-200 ease ${isMenu ? "opacity-100": "opacity-0"}`}>
-                <div className={`block md:hidden duration-300 ease ${isMenu ? " transform-none" : "scale-[0.98] origin-[50%_80%]"}`}>
+            <div className={`block md:hidden z-[9999999] fixed inset-0 top-16 overflow-y-scroll px-3 pt-6 pb-16 bg-white duration-200 ease ${isMenu ? "pointer-events-auto opacity-100": "pointer-events-none opacity-0"}`}>
+                <div className={`block md:hidden duration-300 ease ${isMenu ? "transform-none" : "scale-[0.98] origin-[50%_80%]"}`}>
                     <div>
                         <Products_Links/>
                     </div>
