@@ -28,8 +28,8 @@ function Meet() {
                     Earn interest and borrow assets.
                 </FadeInOnView>
 
-
                 <Meet_Interaction isSupply={isSupply} isBorrow={isBorrow} />
+                
                 <div className='overflow-hidden h-auto mt-24 '>
                     <div className={`grid gap-x-12 px-6 duration-300 ease transition-all ${isBorrow ? "grid-cols-[4fr_11fr]" : "grid-cols-[11fr_4fr]"}`}>
                         <button className='flex flex-col gap-y-4 h-fit bg-none text-start text-inherit'

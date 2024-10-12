@@ -12,7 +12,7 @@ const FlyOutLink = ({ isSticky }: { isSticky: boolean }) => {
         <nav className="flex justify-center items-center"
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => [setOpen(false), setIsHoveredProducts(false), setIsHoveredResources(false), setIsHoveredDevelopers(false)]}>
-            <div className="flex relative justify-center items-center gap-2">
+            <div className="flex relative justify-center items-center gap-2 z-[99999]">
                 <button className={`py-[9px] relative px-4 before:content-[''] before:absolute before:top-0 before:-left-1 before:w-calc-100-plus-8 h-full cursor-pointer rounded-full text-sm font-normal font-inter tracking-[-0.09px] leading-[105%] ${isHoveredProducts ? "bg-backgroundHover" : ""}`}
                     onMouseEnter={() => {
                         setIsHoveredProducts(true)

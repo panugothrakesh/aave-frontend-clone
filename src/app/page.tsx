@@ -5,6 +5,7 @@ import Lenis from 'lenis';
 import Navbar from '@/components/Navbar/navbar';
 import Hero from '@/components/Hero/hero';
 import Meet from '@/components/Meet/Meet';
+import 'lenis/dist/lenis.css'
 
 export default function Home() {
   useEffect(() => {
@@ -19,13 +20,11 @@ export default function Home() {
 
   return (
     <div className="">
-      <div className="header fixed z-[200000] top-0 left-0 right-0">
         <Navbar />
-      </div>
-      <main className='h-full min-h-[100dvh]'>
-        <Hero/>
-        <Meet/>
-      </main>
+        <main className='h-full min-h-[100dvh]'>
+          <Hero/>
+          <Meet/>
+        </main>
       <div className="text-lg font-regola h-[200vh] relative"></div>
     </div>
   );

@@ -177,9 +177,13 @@ const config: Config = {
         'calc-100-plus-8': 'calc(100% + 8px)',
       },
       animationDelay: {
+        '300': '300ms',
         two: '200ms',
         three: '400ms',
         four: '600ms',
+      },
+      scale: {
+        '98': '.98',
       },
   	}
   },
