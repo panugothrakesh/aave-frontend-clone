@@ -8,9 +8,10 @@ type BarsType = {
   translatex: string;
   translatey: string;
   hovered: boolean;
+  animation: any;
 };
 
-function Segment({ path1stroke, rect1, rect2, translatex, translatey, hovered }: BarsType) {
+function Segment({ path1stroke, rect1, rect2, translatex, translatey, hovered, animation }: BarsType) {
     const rotation = useMotionValue(0);
   const velocityX = useMotionValue(0);
   const velocityY = useMotionValue(0);
@@ -71,12 +72,15 @@ function Segment({ path1stroke, rect1, rect2, translatex, translatey, hovered }:
   }, [hovered, leaving, torqueX, torqueY, rotation, lastTorque]);
 
   return (
-    <g
-      onMouseMove={handleMouseMove} // Correct type for SVG element
-      onMouseLeave={handleMouseLeave} // Correct type for SVG element
+    <motion.g
+      animate={"visible"}
+      initial={"hidden"}
+      variants={animation}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
       opacity="1"
       style={{
-        transform: `translate(${translatex}, ${translatey})`,
+        transform: `translateX(${translatex} ${translatey})`,
         transformOrigin: '75px 227.25px',
       }}
     >
@@ -122,7 +126,7 @@ function Segment({ path1stroke, rect1, rect2, translatex, translatey, hovered }:
           </g>
         </g>
       </g>
-    </g>
+    </motion.g>
   );
 }
 

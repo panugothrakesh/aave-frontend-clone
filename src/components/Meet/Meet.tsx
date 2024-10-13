@@ -30,7 +30,7 @@ function Meet() {
 
                 <Meet_Interaction isSupply={isSupply} isBorrow={isBorrow} />
                 
-                <div className='overflow-hidden h-auto mt-12 md:mt-24 '>
+                <div className='overflow-hidden h-auto mt-12 '>
                     <div className={`grid gap-x-12 md:px-6 duration-300 ease transition-all ${isBorrow ? "grid-cols-[4fr_11fr]" : "grid-cols-[11fr_4fr]"}`}>
                         <button className='flex flex-col gap-y-4 h-fit bg-none text-start text-inherit'
                             onClick={() => {

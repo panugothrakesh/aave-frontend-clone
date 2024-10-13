@@ -10,8 +10,8 @@ function Meet_Interaction({ isSupply, isBorrow }: MeetInteractionProps) {
     const svgRef = useRef(null);
     const isInView = useInView(svgRef, { once: true, amount: 1 });
     return (
-        <motion.svg ref={svgRef} xmlns="http://www.w3.org/2000/svg" width="986" height="450" viewBox="0 0 986 450" fill="none"
-            className={`inline-block h-auto max-w-full overflow-hidden rounded-2xl align-top svg mt-12 bg-announcements`}
+        <motion.svg ref={svgRef} xmlns="http://www.w3.org/2000/svg" width="986" viewBox="0 0 986 450" fill="none"
+            className={`inline-block max-w-full h-auto overflow-hidden rounded-2xl align-top svg mt-12 bg-announcements`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: .5, ease: 'easeOut' }}

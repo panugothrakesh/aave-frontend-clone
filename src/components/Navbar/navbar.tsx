@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Logo from "../../assets/svg_components/Navbar/logo"
@@ -11,7 +11,15 @@ function Navbar() {
     const sticky = useRef<HTMLDivElement | null>(null);
     const [isMenu, setIsMenu] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
-    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
+    const [isLargeScreen, setIsLargeScreen] = useState(false);
+    // const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
+    useEffect(()=>{
+        if (window.innerWidth >=789){
+            setIsLargeScreen(true)
+        }else{
+            setIsLargeScreen(false)
+        }
+    })
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);

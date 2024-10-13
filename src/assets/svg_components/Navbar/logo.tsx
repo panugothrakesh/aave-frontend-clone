@@ -1,6 +1,36 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 function Logo() {
+
+  const eyeMove = {
+    hidden: { x: 0 },
+    move: {
+      x: [0, 2.4,2.4, -2.4, -2.4, 0],
+      transition: {
+        duration: 1.5,
+        ease: 'linear',
+        repeat: Infinity,
+        delay: 1,
+        repeatDelay: 7.5,
+      },
+    },
+  };
+
+  const eyeBlink = {
+    hidden: { scaleY: 1 },
+    blink: {
+      scaleY: [1, 0, 0, 1, 0, 0, 1],
+      transition: {
+        duration: .5,
+        ease: 'linear',
+        repeat: Infinity,
+        delay: 3,
+        repeatDelay: 8.5,
+      },
+    },
+  };
+
   return (
     <svg
     className="relative"
@@ -14,18 +44,30 @@ function Logo() {
     <path d="M57.0368 15.5718C52.7558 15.5718 49.3984 12.1432 49.3984 7.92867C49.3984 3.71416 52.8814 0.205078 57.1624 0.205078C61.4434 0.205078 64.9266 3.80612 64.9266 7.88771C64.9266 9.62682 64.9266 15.1889 64.9266 15.1889H61.9121V12.7523L61.6927 12.6948C61.1618 13.9893 59.2388 15.5718 57.0368 15.5718ZM57.1624 3.40312C54.7448 3.40312 52.7769 5.42239 52.7769 7.90496C52.7769 10.3875 54.744 12.373 57.1624 12.373C59.5811 12.373 61.5482 10.3689 61.5482 7.90496C61.5482 5.44104 59.5811 3.40312 57.1624 3.40312Z"></path>
     <path d="M69.9877 15.1874L63.8008 0.589355H67.1856L71.7202 11.3429L76.2554 0.589355H79.6394L73.4533 15.1874H69.9877Z"></path>
     <path d="M14.985 0C6.70823 0 -0.00216598 6.80197 5.24457e-07 15.19H3.82821C3.82821 8.90381 8.78373 3.8072 14.985 3.8072C21.1862 3.8072 26.1418 8.90381 26.1418 15.19H29.9699C29.9715 6.80197 23.261 0 14.985 0Z"></path>
-    <g className="logo-eyes animate-eyes_move" style={{ transformOrigin: "14.9875px 12.5182px" }}>
-      <path
-        className="logo-eye-left scale-y-100 animate-blink"
-        d="M11.007 15.5481C12.6893 15.5481 14.053 14.1915 14.053 12.5182C14.053 10.8448 12.6893 9.48828 11.007 9.48828C9.32471 9.48828 7.96094 10.8448 7.96094 12.5182C7.96094 14.1915 9.32471 15.5481 11.007 15.5481Z"
-        style={{ transformOrigin: "11.007px 12.5182px" }}
-      ></path>
-      <path
-        className="logo-eye-right scale-y-100 animate-blink"
-        d="M18.9679 15.5481C20.6502 15.5481 22.014 14.1915 22.014 12.5182C22.014 10.8448 20.6502 9.48828 18.9679 9.48828C17.2856 9.48828 15.9219 10.8448 15.9219 12.5182C15.9219 14.1915 17.2856 15.5481 18.9679 15.5481Z"
-        style={{ transformOrigin: "18.9679px 12.5182px" }}
-      ></path>
-    </g>
+    <motion.g
+        className="logo-eyes"
+        style={{ transformOrigin: '14.9875px 12.5182px' }}
+        variants={eyeMove}
+        initial="hidden"
+        animate="move"
+      >
+      <motion.path
+          className="logo-eye-left"
+          d="M11.007 15.5481C12.6893 15.5481 14.053 14.1915 14.053 12.5182C14.053 10.8448 12.6893 9.48828 11.007 9.48828C9.32471 9.48828 7.96094 10.8448 7.96094 12.5182C7.96094 14.1915 9.32471 15.5481 11.007 15.5481Z"
+          style={{ transformOrigin: '11.007px 12.5182px' }}
+          variants={eyeBlink}
+          initial="hidden"
+          animate="blink"
+        ></motion.path>
+        <motion.path
+          className="logo-eye-right"
+          d="M18.9679 15.5481C20.6502 15.5481 22.014 14.1915 22.014 12.5182C22.014 10.8448 20.6502 9.48828 18.9679 9.48828C17.2856 9.48828 15.9219 10.8448 15.9219 12.5182C15.9219 14.1915 17.2856 15.5481 18.9679 15.5481Z"
+          style={{ transformOrigin: '18.9679px 12.5182px' }}
+          variants={eyeBlink}
+          initial="hidden"
+          animate="blink"
+        ></motion.path>
+    </motion.g>
   </svg>
   )
 }
