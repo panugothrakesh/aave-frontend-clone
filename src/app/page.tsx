@@ -8,6 +8,7 @@ import Meet from '@/components/Meet/Meet';
 import 'lenis/dist/lenis.css'
 import Numbers from '@/components/Numbers/numbers';
 import { motion } from "framer-motion";
+import Defi_Unlocked from '@/components/Defi/Defi_Unlocked';
 
 export default function Home() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function Home() {
           <Hero/>
           <Meet/>
           <Numbers/>
+          <Defi_Unlocked/>
         </motion.main>
       <div className="text-lg font-regola h-[200vh] relative"></div>
     </div>
