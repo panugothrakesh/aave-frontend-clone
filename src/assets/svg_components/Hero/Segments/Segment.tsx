@@ -46,7 +46,7 @@ function Segment({ path1stroke, rect1, rect2, translatex, translatey, hovered, a
           const newRotation = currentRotation + (torqueX.get() + torqueY.get()) / 300;
           rotation.set(newRotation);
         } else {
-          const pullBack = (currentRotation % 360) / 10;
+          const pullBack = (currentRotation % 360) / 16;
           rotation.set((currentRotation % 360) - pullBack);
         }
       }
@@ -56,7 +56,7 @@ function Segment({ path1stroke, rect1, rect2, translatex, translatey, hovered, a
         const currentRotation = rotation.get();
         const inertia = lastTorque / 300;
        
-        const slowingFactor = Math.abs(lastTorque) > 5 ? 0.8 : 0.5;
+        const slowingFactor = Math.abs(lastTorque) > 5 ? 0.9 : 0.7;
        
         const slowedRotation = currentRotation + inertia;
         rotation.set(slowedRotation);
@@ -67,7 +67,7 @@ function Segment({ path1stroke, rect1, rect2, translatex, translatey, hovered, a
           clearInterval(interval);
         }
       }
-    }, 24);
+    }, 16);
     return () => clearInterval(interval);
   }, [hovered, leaving, torqueX, torqueY, rotation, lastTorque]);
 

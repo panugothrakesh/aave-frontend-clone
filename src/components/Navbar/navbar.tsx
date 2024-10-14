@@ -51,7 +51,7 @@ function Navbar() {
 
     return (
         <>
-              <div className="header fixed z-[200000] top-0 left-0 right-0">
+              <div className="header fixed z-[20000000] top-0 left-0 right-0">
             <header ref={sticky}
                 className={`flex bg-white justify-between items-center max-w-[1082px] mx-auto px-6 md:px-12 md:pt-6 py-1 md:pb-0 sticky top-0 z-50 transition-all duration-300 ease-in-out ${isSticky ? "shadow-navbarShadow" : ""
                     }`}>
