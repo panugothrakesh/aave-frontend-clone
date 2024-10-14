@@ -12,37 +12,8 @@ const config: Config = {
   theme: {
   	extend: {
       keyframes: {
-        send_down1:{
-          "0%": { transform: "translateY(-184px)" },
-          "100%": { transform: "translateY(0px)" },
-        },
-        send_down2:{
-          "0%": { transform: "translateY(0)" },
-          "100%": { transform: "translateY(400px)" },
-        },
-        send_up1:{
-          "0%": { transform: "translateY(0px)" },
-          "100%": { transform: "translateY(-184px)" },
-        },
-        send_up2:{
-          "0%": { transform: "translateY(400px)" },
-          "100%": { transform: "translateY(0)" },
-        },
-        toandfro_motion:{
-          '0%, 100%':{
-            transform: 'translateY(-30px)'
-          },
-          '50%':{
-            transform: 'translateY(30px)'
-          }
-        },
       },
       animation: {
-        down1: 'send_down1 .5s ease-in-out both',
-        down2: 'send_down2 .5s ease-in-out both',
-        up1: 'send_up1 .5s ease-in-out both',
-        up2: 'send_up2 .5s ease-in-out forwards',
-        up_down: 'toandfro_motion 4s infinite ease-in-out both',
       },
   		boxShadow: {
   			navbarShadow: '0px 1px 0px 0px rgba(0, 0, 0, 0.06)',
@@ -78,9 +49,6 @@ const config: Config = {
       },
       animationDelay: {
         '300': '300ms',
-        two: '200ms',
-        three: '400ms',
-        four: '600ms',
       },
       scale: {
         '98': '.98',
