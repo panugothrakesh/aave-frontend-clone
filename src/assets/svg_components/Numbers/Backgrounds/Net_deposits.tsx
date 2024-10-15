@@ -1,9 +1,6 @@
-import { useInView, motion } from 'framer-motion';
-import React, { useRef } from 'react'
+import { motion } from 'framer-motion';
 
-function Net_deposits() {
-    const svgRef = useRef(null);
-    const isInView = useInView(svgRef, { once: true, amount: 1 });
+function Net_deposits({isInView}:{isInView : boolean}) {
 
     const inView = {
         initial: {y:220,},
@@ -17,7 +14,7 @@ function Net_deposits() {
         transition: {duration: 3, ease: 'easeInOut', delay: 0, repeat: Infinity}}
     }
   return (
-    <svg ref={svgRef} className='w-full h-auto' width="457" height="250" viewBox="0 0 457 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className='w-full h-auto' width="457" height="250" viewBox="0 0 457 250" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g>
             <g>
                 <path

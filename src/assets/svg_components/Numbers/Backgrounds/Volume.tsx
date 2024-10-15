@@ -1,10 +1,6 @@
-import { useInView, motion } from 'framer-motion';
-import React, { useRef } from 'react'
+import { motion } from 'framer-motion';
 
-function Volume() {
-
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 1 });
+function Volume({isInView}:{isInView : boolean}) {
 
     const inView = {
         initial: {x: -177, opacity:0},
@@ -30,7 +26,7 @@ function Volume() {
         transition: {duration: 5, ease: 'easeInOut', repeat: Infinity, delay:.8}}
     }
     return (
-    <svg ref={ref} className='w-full h-auto' width="457" height="250" viewBox="545 0 457 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className='w-full h-auto' width="457" height="250" viewBox="545 0 457 250" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="400%" height="100%" fill="#63BBB6" />
         <motion.g initial="initial" animate="animate" id="bottom" variants={inView} style={{ transformOrigin: '770.75px 62.5px' }}>
             <motion.g initial="initial" animate="animate" id="top" variants={to_and_fro} style={{ transformOrigin: '770.75px 62.5px' }}>

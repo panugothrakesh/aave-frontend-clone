@@ -1,10 +1,6 @@
-import React, { useRef } from 'react'
-import { useInView, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
-function AbstractBg_1() {
-    const svgRef = useRef(null);
-    const isInView = useInView(svgRef, { once: true, amount: 1 });
-
+function AbstractBg_1({ isInView }: {isInView : boolean}) {
     const reveal ={
         hidden:{y: -300, opacity:0},
         show:{y : isInView ? 0 : -300 , opacity: isInView ? 1 : 0,
@@ -22,7 +18,6 @@ function AbstractBg_1() {
 
   return (
     <svg
-    ref={svgRef}
     width="473"
     height="150"
     viewBox="0 0 473 150"
