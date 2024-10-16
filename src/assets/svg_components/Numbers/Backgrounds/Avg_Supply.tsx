@@ -1,9 +1,7 @@
-import { useInView, motion, useAnimation } from 'framer-motion';
-import React, { useEffect, useRef } from 'react'
+import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect} from 'react'
 
-function Avg_Supply() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 1 });
+function Avg_Supply({isInView}:{isInView : boolean}) {
   const controls = useAnimation();
 
   const inView = {
@@ -29,7 +27,6 @@ function Avg_Supply() {
   return (
     <svg
     className='w-full h-auto'
-    ref={ref}
     width="457"
     height="250"
     viewBox="0 0 457 250"

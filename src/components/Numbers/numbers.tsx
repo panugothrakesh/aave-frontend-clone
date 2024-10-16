@@ -5,10 +5,21 @@ import Volume from '@/assets/svg_components/Numbers/Backgrounds/Volume'
 import React from 'react'
 import { StackText } from '../ui/stack-text'
 import NumberTicker from '../ui/number-ticker'
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const title_animation = ['Aave', 'by', 'the', 'numbers.']
 
 function Numbers() {
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+    const ref3 = useRef(null);
+    const ref4 = useRef(null);
+    
+    const isInView1 = useInView(ref1, { once: true, amount: 1 });
+    const isInView2 = useInView(ref2, { once: true, amount: 1 });
+    const isInView3 = useInView(ref3, { once: true, amount: 1 });
+    const isInView4 = useInView(ref4, { once: true, amount: 1 });
 
   return (
     <section className='relative md:pt-[100px] flex flex-col items-center w-full py-12 md:py-[100px] px-5 md:px-12 after:content-[""] after:absolute after:bottom-0 after:max-w-[1082px] after:w-full after:border-bordercolor after:border-b-[1px] after:border-solid'>
@@ -33,9 +44,9 @@ function Numbers() {
                     </p>
                 </div>
                 <div className='flex flex-col gap-y-12'>
-                    <div>
+                    <div ref={ref1}>
                         <div className='overflow-hidden relative z-[1] rounded-2xl'>
-                            <Net_deposits/>
+                            <Net_deposits isInView={isInView1}/>
                         </div>
                         <p className='flex items-center gap-x-3 mt-3 py-5'>
                             <span className='font-regolaMedium text-2xl leading-[105%] -tracking-[.48px] font-semibold text-primaryHeadingGray w-full max-w-[4.4em]'>
@@ -47,8 +58,8 @@ function Numbers() {
                         </p>
                     </div>
                     <div>
-                    <div className='overflow-hidden relative z-[1] rounded-2xl'>
-                            <Volume/>
+                    <div ref={ref2} className='overflow-hidden relative z-[1] rounded-2xl'>
+                            <Volume isInView={isInView2}/>
                         </div>
                         <p className='flex items-center gap-x-3 mt-3 py-5'>
                             <span className='font-regolaMedium text-2xl leading-[105%] -tracking-[.48px] text-primaryHeadingGray w-full max-w-[4.4em]'>
@@ -60,8 +71,8 @@ function Numbers() {
                         </p>
                     </div>
                     <div>
-                    <div className='overflow-hidden relative z-[1] rounded-2xl'>
-                            <Avg_Supply/>
+                    <div ref={ref3} className='overflow-hidden relative z-[1] rounded-2xl'>
+                            <Avg_Supply isInView={isInView3}/>
                         </div>
                         <p className='flex items-center gap-x-3 mt-3 py-5'>
                             <span className='font-regolaMedium text-2xl leading-[105%] -tracking-[.48px] text-primaryHeadingGray w-full max-w-[4.4em]'>
@@ -73,8 +84,8 @@ function Numbers() {
                         </p>
                     </div>
                     <div>
-                    <div className='overflow-hidden relative z-[1] rounded-2xl'>
-                            <Avg_Borrow/>
+                    <div ref={ref4} className='overflow-hidden relative z-[1] rounded-2xl'>
+                            <Avg_Borrow isInView={isInView4}/>
                         </div>
                         <p className='flex items-center gap-x-3 mt-3 py-5'>
                             <span className='font-regolaMedium text-2xl leading-[105%] -tracking-[.48px] text-primaryHeadingGray w-full max-w-[4.4em]'>

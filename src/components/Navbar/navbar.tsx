@@ -19,7 +19,7 @@ function Navbar() {
         }else{
             setIsLargeScreen(false)
         }
-    })
+    },[])
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);

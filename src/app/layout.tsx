@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import {Inter, Roboto_Mono} from "next/font/google";
 import "./globals.css";
+import 'lenis/dist/lenis.css'
 
 
 const inter = Inter({

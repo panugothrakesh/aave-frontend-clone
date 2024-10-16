@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useMotionValue, useVelocity } from 'framer-motion';
+import { motion, useMotionValue, useVelocity, Variants } from 'framer-motion';
 
 type BarsType = {
   path1stroke: string;
@@ -8,7 +8,7 @@ type BarsType = {
   translatex: string;
   translatey: string;
   hovered: boolean;
-  animation: any;
+  animation: Variants;
 };
 
 function Segment({ path1stroke, rect1, rect2, translatex, translatey, hovered, animation }: BarsType) {

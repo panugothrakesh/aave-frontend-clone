@@ -7,9 +7,9 @@ const title_animation = ['Defi,', 'unlocked.']
 
 function Defi_Unlocked() {
   return (
-    <section className='flex items-center flex-col w-full py-[100px] px-12'>
+    <section className='flex items-center flex-col w-full py-12 md:py-[100px] px-5 md:px-12'>
         <div className='relative w-full max-w-[986px]'>
-            <h2 className='flex flex-wrap items-center gap-x-2'>
+            <h2 className='flex flex-wrap items-center gap-x-2 px-0 md:px-6'>
                 {title_animation.map((word, index) => (
                     <StackText
                         key={index}
@@ -22,10 +22,10 @@ function Defi_Unlocked() {
                     />
                 ))}
             </h2>
-            <div className='grid grid-cols-2 grid-rows-[300px_300px] gap-y-12 gap-x-10 mt-12'>
+            <div className='grid grid-cols-1 md:grid-cols-2 md:grid-rows-[300px_300px] grid-rows-[300px_300px_300px_300px] gap-y-12 gap-x-10 mt-12'>
                 <Grid_Features/>
             </div>
-            <div className='mt-12'>
+            <div className='mt-12 flex flex-col gap-4 md:gap-0'>
                     <List_Features/>
             </div>
         </div>

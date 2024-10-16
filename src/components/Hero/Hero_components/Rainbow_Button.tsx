@@ -1,5 +1,4 @@
 import RainbowArrow_icon from "@/assets/svg_components/Hero/RainbowArrow_icon";
-import { transcode } from "buffer";
 import { motion } from "framer-motion";
 
 const Rainbow_Button = () => {

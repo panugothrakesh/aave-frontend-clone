@@ -4,7 +4,7 @@ import { FadeText } from '../ui/up-text';
 import { StackText } from '../ui/stack-text';
 import Rainbow_Button from './Hero_components/Rainbow_Button';
 import Svg_Components from '../../assets/svg_components/Hero/Segments/Svg_Components';
-import { delay, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const title_animation = ["Access", "the", "full", "power", "of", "DeFi."]
 
@@ -72,7 +72,7 @@ function Hero() {
                     </span>
                 </h1>
                 <div className='max-w-[20em] text-xl'>
-                    <FadeText className='text-xl font-normal normal text-primaryParagraph leading-[150%] -tracking-[0.47px]'
+                    <FadeText className='text-xl on font-normal normal text-primaryParagraph leading-[150%] -tracking-[0.47px]'
                         framerProps={{ show: { transition: { delay: 1.2 } }, }} direction="up">
                         Aave is the world<em className='mr-0.5 -ml-0.5'>&apos;</em>s largest liquidity protocol. Supply, borrow, swap, stake and more.
                     </FadeText>

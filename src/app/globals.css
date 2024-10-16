@@ -17,6 +17,7 @@
     --secondary-paragraph: #8f8e8e;
 
     --border-color: color(display-p3 .9451 .9451 .9412);
+    --bg-color: #f7f7f6;
     
 
     --background-gray: rgb(247, 246, 246);
@@ -33,6 +34,14 @@
 
 div{
     display: block;
+}
+
+.on{
+    font-feature-settings: "cv11" on, "ss01" on, "ss03" on;
+}
+
+.custom_transition::before{
+    transition-property: background-position, opacity, background-image;
 }
 
 ::-webkit-scrollbar {
