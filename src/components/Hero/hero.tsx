@@ -4,7 +4,7 @@ import { FadeText } from '../ui/up-text';
 import { StackText } from '../ui/stack-text';
 import Rainbow_Button from './Hero_components/Rainbow_Button';
 import Svg_Components from '../../assets/svg_components/Hero/Segments/Svg_Components';
-import { delay, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const title_animation = ["Access", "the", "full", "power", "of", "DeFi."]
 

@@ -1,12 +1,12 @@
 import Segment from '@/assets/svg_components/Hero/Segments/Segment';
 import React, { useState, useRef } from 'react';
-import { delay, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 const Svg_Components = () => {
 
     const bar1Animation = {
-        hidden: { y: 420, x: 0, visibility: 'hidden'},
+        hidden: { y: 420, x: 0, visibility: 'hidden' as const},
         visible: {
-            visibility: 'visible',
+            visibility: 'visible' as const,
           y: 220,
           x: 0,
           transition: { duration: .5, ease: 'easeInOut', delay:.4 }
@@ -14,9 +14,9 @@ const Svg_Components = () => {
       };
       
       const bar2Animation = {
-        hidden: { y: 430, x: 152 , visibility: 'hidden'},
+        hidden: { y: 430, x: 152 , visibility: 'hidden' as const},
         visible: {
-            visibility: 'visible',
+            visibility: 'visible' as const,
           y: 210,
           x: 152,
           transition: { duration: .5, ease: 'easeInOut', delay:.45 }
@@ -24,9 +24,9 @@ const Svg_Components = () => {
       };
       
       const bar3Animation = {
-        hidden: { y: 460, x: 304 , visibility: 'hidden'},
+        hidden: { y: 460, x: 304 , visibility: 'hidden' as const},
         visible: {
-            visibility: 'visible',
+            visibility: 'visible' as const,
           y: 190,
           x: 304,
           transition: { duration: .5, ease: 'easeInOut', delay:.5 }
@@ -34,9 +34,9 @@ const Svg_Components = () => {
       };
       
       const bar4Animation = {
-        hidden: { y: 480, x: 456 , visibility: 'hidden'},
+        hidden: { y: 480, x: 456 , visibility: 'hidden' as const},
         visible: {
-            visibility: 'visible',
+            visibility: 'visible' as const,
           y: 170,
           x: 456,
           transition: { duration: .5, ease: 'easeInOut', delay:.55 }
@@ -44,9 +44,9 @@ const Svg_Components = () => {
       };
       
       const bar5Animation = {
-        hidden: { y: 530, x: 608, visibility: 'hidden'},
+        hidden: { y: 530, x: 608, visibility: 'hidden' as const},
         visible: {
-            visibility: 'visible',
+            visibility: 'visible' as const,
           y: 120,
           x: 608,
           transition: { duration: .5, ease: 'easeInOut', delay:.6 }
@@ -54,9 +54,9 @@ const Svg_Components = () => {
       };
       
       const bar6Animation = {
-        hidden: { y: 590, x: 760, visibility: 'hidden'},
+        hidden: { y: 590, x: 760, visibility: 'hidden' as const},
         visible: {
-            visibility: 'visible',
+            visibility: 'visible' as const,
           y: 60,
           x: 760,
           transition: { duration: .5, ease: 'easeInOut', delay:.65 }
