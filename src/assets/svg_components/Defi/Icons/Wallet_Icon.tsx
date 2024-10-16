@@ -110,7 +110,6 @@ exit: {
     animate={animationState}
     variants={wallet}
       style={{ transformOrigin: '6px 16px' }}
-      transform-origin="6px 16px"
     >
       <rect width="32" height="32" />
       <motion.path

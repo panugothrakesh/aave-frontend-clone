@@ -26,7 +26,7 @@ function Net_deposits({isInView}:{isInView : boolean}) {
                                 transition: {
                                 ...to_and_fro.animate.transition,
                                 delay: .8,
-                                }}} variants={to_and_fro} style={{ transformOrigin: '229px 186px' }} transform-origin="229px 186px">
+                                }}} variants={to_and_fro} style={{ transformOrigin: '229px 186px' }}>
                     <motion.g initial="initial" animate={{...inView.animate,
                                 transition: {
                                 ...inView.animate.transition,

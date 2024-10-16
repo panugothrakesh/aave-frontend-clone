@@ -29,14 +29,14 @@ function AbstractBg_1({ isInView }: {isInView : boolean}) {
       <motion.g initial="hidden" animate={{...reveal.show,
                                 transition: {
                                 ...reveal.show.transition,
-                                delay: .2,
+                                delay: .4,
                                 }}} variants={reveal}
         style={{ mixBlendMode: 'multiply', transformOrigin: '323px 150px' }}
       >
         <motion.g initial='initial' animate={{...to_and_fro.animate,
                                 transition: {
                                 ...to_and_fro.animate.transition,
-                                delay: .2,
+                                delay: .4,
                                 }}} variants={to_and_fro} style={{ transformOrigin: '323px 150px' }}>
           <g id="Ellipse 3341">
             <path

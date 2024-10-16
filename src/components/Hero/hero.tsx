@@ -72,7 +72,7 @@ function Hero() {
                     </span>
                 </h1>
                 <div className='max-w-[20em] text-xl'>
-                    <FadeText className='text-xl font-normal normal text-primaryParagraph leading-[150%] -tracking-[0.47px]'
+                    <FadeText className='text-xl on font-normal normal text-primaryParagraph leading-[150%] -tracking-[0.47px]'
                         framerProps={{ show: { transition: { delay: 1.2 } }, }} direction="up">
                         Aave is the world<em className='mr-0.5 -ml-0.5'>&apos;</em>s largest liquidity protocol. Supply, borrow, swap, stake and more.
                     </FadeText>

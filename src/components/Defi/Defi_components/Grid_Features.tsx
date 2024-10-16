@@ -18,7 +18,7 @@ function Grid_Features() {
 
     return (
         <>
-            <div ref={ref1} className='flex flex-col justify-end relative z-0 overflow-hidden rounded-2xl py-8 px-10 bg-backgroundGray'>
+            <div ref={ref1} className='flex flex-col justify-end relative z-0 overflow-hidden rounded-2xl py-8 px-6 md:px-10 bg-bg_color'>
                 <h3 className='mb-4 font-regola text-2xl leading-[135%] -tracking-[.48px] text-primaryHeadingGray'>
                     Swap
                 </h3>
@@ -27,7 +27,7 @@ function Grid_Features() {
                 </p>
                 <AbstractBg_1 isInView={isInView1}/>
             </div>
-            <div ref={ref2} className='flex flex-col justify-end relative z-0 overflow-hidden rounded-2xl py-8 px-10 bg-backgroundGray'>
+            <div ref={ref2} className='flex flex-col justify-end relative z-0 overflow-hidden rounded-2xl py-8 px-6 md:px-10 bg-bg_color'>
                 <h3 className='mb-4 font-regola text-2xl leading-[135%] -tracking-[.48px] text-primaryHeadingGray'>
                     Stake
                 </h3>
@@ -36,7 +36,7 @@ function Grid_Features() {
                 </p>
                 <AbstractBg_2 isInView={isInView2}/>
             </div>
-            <div ref={ref3} className='flex flex-col justify-end relative z-0 overflow-hidden rounded-2xl py-8 px-10 bg-backgroundGray'>
+            <div ref={ref3} className='flex flex-col justify-end relative z-0 overflow-hidden rounded-2xl py-8 px-6 md:px-10 bg-bg_color'>
                 <h3 className='mb-4 font-regola text-2xl leading-[135%] -tracking-[.48px] text-primaryHeadingGray'>
                     Health Factor
                 </h3>
@@ -45,7 +45,7 @@ function Grid_Features() {
                 </p>
                 <AbstractBg_3 isInView={isInView3}/>
             </div>
-            <div ref={ref4} className='flex flex-col justify-end relative z-0 overflow-hidden rounded-2xl py-8 px-10 bg-backgroundGray'>
+            <div ref={ref4} className='flex flex-col justify-end relative z-0 overflow-hidden rounded-2xl py-8 px-6 md:px-10 bg-bg_color'>
                 <h3 className='mb-4 font-regola text-2xl leading-[135%] -tracking-[.48px] text-primaryHeadingGray'>
                     Multi-Network
                 </h3>
