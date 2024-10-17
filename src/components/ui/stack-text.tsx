@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { ReactNode, useMemo } from "react";
 import { motion, Variants, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -6,7 +6,7 @@ type StackTextProps = {
   className?: string;
   direction?: "up" | "down" | "left" | "right";
   framerProps?: Variants;
-  text: string;
+  text: ReactNode;
 };
 
 export function StackText({

@@ -1,24 +1,67 @@
 import React from 'react';
 import { motion } from 'framer-motion'
-import Group1 from '../Each_Circle/Group1';
-import Group2 from '../Each_Circle/Group2';
-import Group3 from '../Each_Circle/Group3';
-import Group4 from '../Each_Circle/Group4';
-import Group5 from '../Each_Circle/Group5';
-import Group6 from '../Each_Circle/Group6';
-import Group7 from '../Each_Circle/Group7';
-import Group8 from '../Each_Circle/Group8';
-import Group9 from '../Each_Circle/Group9';
-import Group10 from '../Each_Circle/Group10';
-import Group11 from '../Each_Circle/Group11';
-import Group12 from '../Each_Circle/Group12';
-import Group13 from '../Each_Circle/Group13';
+import Circles from '../Each_Circle/Circles';
 
 type introType = {
   isInView: boolean;
 }
 
 const GHO_Intro = ({ isInView }: introType) => {
+  const all_groups = [
+    {
+      transformOrigin: '-53px_454px',
+      groupProps: { cx: '-53', cy: '454', r: '74', fill: '#28D358', fillOpacity: '0.25', yValues: [1, -9, 1] as [number, number, number], delay: 0, duration: 4},
+    },
+    {
+      transformOrigin: '56px_262px',
+      groupProps: { cx: '56', cy: '262', r: '35', fill: '#28D358', fillOpacity: '0.7', yValues: [2, -10, 2] as [number, number, number], delay: 0.3, duration: 4},
+    },
+    {
+      transformOrigin: '556px_101px',
+      groupProps: { cx: '556', cy: '101', r: '31', fill: '#92E7AA', yValues: [-2, 2, -2] as [number, number, number], delay: 0.7, duration: 3.6},
+    },
+    {
+      transformOrigin: '575px_454px',
+      groupProps: { cx: '575', cy: '454', r: '35', fill: '#28D358', yValues: [10, -10, 10] as [number, number, number], delay: 0.2, fillOpacity: '0.5', duration: 4},
+    },
+    {
+      transformOrigin: '182px_-30px',
+      groupProps: { cx: '182', cy: '-30', r: '52', fill: '#28D358', yValues: [10, 3, 10] as [number, number, number], delay: 0.2, fillOpacity: '0.5', duration: 3.8},
+    },
+    {
+      transformOrigin: '301px_528px',
+      groupProps: { cx: '301', cy: '528', r: '52', fill: '#28D358', yValues: [-10, 7, -10] as [number, number, number], delay: 0, fillOpacity: '0.5', duration: 4},
+    },
+    {
+      transformOrigin: '190px_151px',
+      groupProps: { cx: '190', cy: '151', r: '13', fill: '#28D358', yValues: [9, 4, 9] as [number, number, number], delay: 0.5, duration: 2.4},
+    },
+    {
+      transformOrigin: '69px_83px',
+      groupProps: { cx: '69', cy: '83', r: '18', fill: '#92E7AA', yValues: [-5, 5, -5] as [number, number, number], delay: 0.5, duration: 2.4},
+    },
+    {
+      transformOrigin: '489px_204px',
+      groupProps: { cx: '489', cy: '204', r: '13', fill: '#28D358', yValues: [3, -7, 3] as [number, number, number], delay: 0.5, duration: 3},
+    },
+    {
+      transformOrigin: '369px_164px',
+      groupProps: { cx: '369', cy: '164', r: '6', fill: '#28D358', yValues: [-2, 7, -2] as [number, number, number], delay: 0.5, duration: 2.6},
+    },
+    {
+      transformOrigin: '401px_329px',
+      groupProps: { cx: '401', cy: '329', r: '6', fill: '#28D358', yValues: [8, -7, 8] as [number, number, number], delay: 0, duration: 3.2},
+    },
+    {
+      transformOrigin: '223px_283px',
+      groupProps: { cx: '223', cy: '283', r: '6', fill: '#28D358', yValues: [-8, 1, -8] as [number, number, number], delay: 0.2, duration: 3},
+    },
+    {
+      transformOrigin: '216px_380px',
+      groupProps: { cx: '216', cy: '380', r: '13', fill: '#92E7AA', yValues: [9, -9, 9] as [number, number, number], delay: 0.6, duration: 3.4},
+    },
+  ];
+  
   const Outer_reveal = {
     hidden: {
       visibility: 'hidden' as const, scale: .8
@@ -80,122 +123,17 @@ const GHO_Intro = ({ isInView }: introType) => {
           <circle cx="340.365" cy="240.006" r="12.3425" fill="white" stroke="#3BE069" strokeWidth="0.584946" />
           <circle cx="308.516" cy="240.006" r="12.3425" fill="white" stroke="#3BE069" strokeWidth="0.584946" />
         </motion.g>
-        
-        
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal} transform-origin="-53px 454px">
-                <Group1 isInView/>
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="56px 262px">
-            <Group2 isInView/>
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="556px 101px">
-          <Group3 isInView/>
-        </motion.g>
-
-
-        <motion.g 
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="575px 454px">
-          <Group4 isInView/>
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="182px -30px">
-          <Group5 isInView/>
-        </motion.g>
-
-        
-        <motion.g 
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="301px 528px">
-          <Group6 isInView/>
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-      transform-origin="190px 151px">
-          <Group7 isInView/>
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="69px 83px">
-          <Group8 isInView/>
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="489px 204px">
-          <Group9 isInView/>
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="369px 164px">
-          <Group10 isInView/>
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="401px 329px">
-          <Group11 isInView/>
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="223px 283px">
-          <Group12 isInView />
-        </motion.g>
-
-
-        <motion.g
-              initial='hidden'
-              animate='animate'
-              variants={reveal}
-        transform-origin="216px 380px">
-          <Group13 isInView/>
-        </motion.g>
+        {all_groups.map(({ transformOrigin, groupProps }, index) => (
+          <motion.g
+            key={index}
+            initial="hidden"
+            animate="animate"
+            variants={reveal}
+            className={`origin-[${transformOrigin}]`}
+          >
+            <Circles isInView={isInView} transformOrigin={transformOrigin} {...groupProps} />
+          </motion.g>
+        ))}
       </g>
     </motion.svg>
   );

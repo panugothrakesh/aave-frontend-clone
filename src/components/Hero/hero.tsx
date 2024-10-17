@@ -83,11 +83,10 @@ function Hero() {
                         className="cursor-pointer group rainbow_hover relative inline-flex mt-7"
                         whileHover="visible"
                     >
-                        {/* Using FadeText to include the animation delay */}
                         <FadeText
                         framerProps={{
                             show: {
-                            transition: { delay: 1.4 }, // Fade in delay for the text
+                            transition: { delay: 1.4 },
                             },
                         }}
                         direction="up"

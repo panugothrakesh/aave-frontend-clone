@@ -1,13 +1,39 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
-function Collateralisation_Background() {
+type Coll_BGType = {
+  isInView: boolean;
+}
+
+const Collateralisation_Background = ({ isInView }: Coll_BGType) => {
+
+  const reveal = {
+    hidden: {opacity : 0},
+    animate: { opacity: isInView ? 1 : 0,
+      transition: {duration: .5, delay: .25, ease: "easeInOut", once : true}
+    }
+  }
+  
+  const to_and_fro = {
+    hidden: { rotate : 0 },
+    animate: {
+      rotate: isInView ? [0, 1, 0] : 0,
+      transition: {
+        duration: 2.4,
+        ease: 'easeInOut',
+        repeat: Infinity,
+      },
+    },
+  };
   return (
-    <svg
+    <motion.svg
+      initial="hidden"
+      animate="animate"
+      variants={reveal}
       viewBox="0 0 320 150"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      style={{ opacity: 1, transition: 'opacity 0.5s 0.25s' }}
-      overflow="visible"
+      className={`overflow-visible`}
     >
       <g style={{ transform: 'scale(1.5) translateY(30px) translateX(-52px)' }}>
         <g clipPath="url(#clip0_4040_7171)">
@@ -41,7 +67,11 @@ function Collateralisation_Background() {
             ></path>
           </g>
           <g style={{ transform: 'rotate(35deg)', transformOrigin: '160px 160px' }}>
-            <g style={{ transform: 'rotate(0.998726deg)', transformOrigin: '160px 160px' }}>
+            <motion.g 
+            initial="hidden"
+            animate="animate"
+            variants={to_and_fro}
+            style={{ transformOrigin: '160px 160px' }}>
               <rect
                 width="320"
                 height="320"
@@ -65,7 +95,7 @@ function Collateralisation_Background() {
                 stroke="#FCFCFB"
                 strokeWidth="2"
               ></rect>
-            </g>
+            </motion.g>
           </g>
         </g>
       </g>
@@ -74,7 +104,7 @@ function Collateralisation_Background() {
           <rect width="320" height="320" fill="white"></rect>
         </clipPath>
       </defs>
-    </svg>
+    </motion.svg>
   );
 }
 
