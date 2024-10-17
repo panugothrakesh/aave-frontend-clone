@@ -9,10 +9,18 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'sm': '520px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
   	extend: {
   		boxShadow: {
   			navbarShadow: '0px 1px 0px 0px rgba(0, 0, 0, 0.06)',
   			navbarCard: '0 6px 20px 0 rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.06)',
+  			link_buttons: '0 2px 3px 0 rgba(0,0,0,.08),0 6px 16px 0 rgba(0,0,0,.1)',
   		},
   		colors: {
   			secondaryGray: 'var(--secondary-gray)',
@@ -44,6 +52,8 @@ const config: Config = {
         'current-linear': 'linear-gradient(180deg, currentColor 0, currentColor)',
         'hover-linear' : 'linear-gradient(90deg,CurrentColor,CurrentColor 33.33%,currentColor 0,currentColor 66.66%,currentColor 0,currentColor)',
         'hover-linearH' : 'linear-gradient(90deg,CurrentColor,CurrentColor 33.33%,transparent 0,transparent 66.66%,currentColor 0,currentColor)',
+        'left-fade' : 'linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, .738) 19%, hsla(0, 0%, 100%, .541) 34%, hsla(0, 0%, 100%, .382) 47%, hsla(0, 0%, 100%, .278) 56.5%, hsla(0, 0%, 100%, .194) 65%, hsla(0, 0%, 100%, .126) 73%, hsla(0, 0%, 100%, .075) 80.2%, hsla(0, 0%, 100%, .042) 86.1%, hsla(0, 0%, 100%, .021) 91%, hsla(0, 0%, 100%, .008) 95.2%, hsla(0, 0%, 100%, .002) 98.2%, hsla(0, 0%, 100%, 0))',
+        'right-fade' : 'linear-gradient(270deg,#fff 0,hsla(0,0%,100%,.738) 19%,hsla(0,0%,100%,.541) 34%,hsla(0,0%,100%,.382) 47%,hsla(0,0%,100%,.278) 56.5%,hsla(0,0%,100%,.194) 65%,hsla(0,0%,100%,.126) 73%,hsla(0,0%,100%,.075) 80.2%,hsla(0,0%,100%,.042) 86.1%,hsla(0,0%,100%,.021) 91%,hsla(0,0%,100%,.008) 95.2%,hsla(0,0%,100%,.002) 98.2%,hsla(0,0%,100%,0))',
       },
       width:{
         'calc-100-plus-8': 'calc(100% + 8px)',

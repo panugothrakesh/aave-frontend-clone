@@ -9,6 +9,10 @@ import Numbers from '@/components/Numbers/numbers';
 import { motion } from "framer-motion";
 import Defi_Unlocked from '@/components/Defi/Defi_Unlocked';
 import GHO from '@/components/GHO/gho';
+import Aave_Everywhere from '@/components/Aave_Everywhere/Aave_Everywhere';
+import Trusted_By from '@/components/Trusted_By/Trusted_by';
+import Governed_Card from '@/components/Governed_Card/Governed_Card';
+import Security from '@/components/Security/Security';
 
 export default function Home() {
   useEffect(() => {
@@ -36,6 +40,10 @@ export default function Home() {
           <Numbers/>
           <Defi_Unlocked/>
           <GHO/>
+          <Aave_Everywhere/>
+          <Trusted_By/>
+          <Governed_Card/>
+          <Security/>
         </motion.main>
       <div className="text-lg font-regola h-[200vh] relative"></div>
     </div>
