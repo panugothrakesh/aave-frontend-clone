@@ -36,14 +36,14 @@ function Trusted_By() {
             after:content-[""] after:right-0 after:z-[2] after:pointer-events-none after:absolute after:top-0 after:bottom-0 after:w-40 after:bg-right-fade'>
                 <div className='relative overflow-hidden pt-20 w-[400%] md:w-[200%]'>
                     <motion.div animate="animate" variants={infinite} className='flex flex-nowrap'>
-                        <div className='flex flex-nowrap gap-12 pr-12'>
+                        <div className='flex flex-nowrap md:gap-12 md:pr-12 gap-6 pr-6'>
                             {logoData.map((logo, index) => (
                                 <div className='flex items-center justify-center' key={index}>
                                     {logo.logo}
                                 </div>
                             ))}
                         </div>
-                        <div className='flex flex-nowrap gap-12 pr-12'>
+                        <div className='flex flex-nowrap md:gap-12 md:pr-12 gap-6 pr-6'>
                             {logoData.map((logo, index) => (
                                 <div className='flex items-center justify-center' key={index}>
                                     {logo.logo}
