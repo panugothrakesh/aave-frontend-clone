@@ -25,6 +25,9 @@
     --background-hover: rgba(34, 29, 29, 0.03);
     --description-opacity: 0.7;
 }
+html{
+    scroll-padding: 6rem;
+}
 
 *{
     margin: 0;

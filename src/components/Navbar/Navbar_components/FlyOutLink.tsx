@@ -44,7 +44,6 @@ const FlyOutLink = ({ isSticky }: { isSticky: boolean }) => {
                 {open &&
                     <>
                         <DropDownArrow isHoveredDevelopers={isHoveredDevelopers} isHoveredResources={isHoveredResources} isHoveredProducts={isHoveredProducts} open={open} isSticky={isSticky} />
-
                         <FloatingDiv isHoveredDevelopers={isHoveredDevelopers} isHoveredResources={isHoveredResources} isHoveredProducts={isHoveredProducts} open={open} isSticky={isSticky} />
                     </>
                 }

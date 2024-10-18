@@ -23,7 +23,7 @@ function Gho_Head() {
                     <p className='mt-3 font-inter text-lg md:text-xl font-regular leading-[135%] -tracking-[.33px] text-primaryParagraph w-full max-w-[24em]'>
                         GHO is the only decentralised, overcollateralised stablecoin native to the Aave Protocol.
                     </p>
-                    <BarButton>
+                    <BarButton href='https://aave.com/gho'>
                         Learn More
                     </BarButton>
             </div>

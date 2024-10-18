@@ -32,7 +32,7 @@ function Governed_Card() {
                         <StackText
                             key={index}
                             direction="up"
-                            className='mt-3 font-inter text-lg md:text-xl font-regular leading-[135%] -tracking-[.33px] text-[#90caff] w-full ml-1'
+                            className='mt-3 font-inter text-xl font-medium md:font-normal leading-[150%] md:leading-[135%] -tracking-[.33px] text-[#90caff] w-full ml-1'
                             framerProps={{
                                 show: { transition: { delay: 0.4 + (0.2 + index * 0.05) } },
                             }}
