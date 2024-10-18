@@ -10,6 +10,7 @@ const config: Config = {
   ],
   theme: {
     screens: {
+      'xs': '480px',
       'sm': '520px',
       'md': '768px',
       'lg': '1024px',
@@ -17,6 +18,22 @@ const config: Config = {
       '2xl': '1536px',
     },
   	extend: {
+      keyframes: {
+        bottomMove_Animation: {
+          '0%': { 'background-position': '0 0' },
+          '10%': { 'background-position': '0 0' },
+          '20%': { 'background-position': '0 0' },
+          '30%': { 'background-position': '0 0' },
+          '40%': { 'background-position': '0 0' },
+          '50%': { 'background-position': '0 0' },
+          '60%': { 'background-position': '0 0' },
+          '70%': { 'background-position': '0 0' },
+          '100%': { 'background-position': '100% 0' },
+        },
+      },
+      animation: {
+        'bg-move': 'bottomMove_Animation 6s ease-in-out infinite',
+      },
   		boxShadow: {
   			navbarShadow: '0px 1px 0px 0px rgba(0, 0, 0, 0.06)',
   			navbarCard: '0 6px 20px 0 rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.06)',
@@ -54,6 +71,7 @@ const config: Config = {
         'hover-linearH' : 'linear-gradient(90deg,CurrentColor,CurrentColor 33.33%,transparent 0,transparent 66.66%,currentColor 0,currentColor)',
         'left-fade' : 'linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, .738) 19%, hsla(0, 0%, 100%, .541) 34%, hsla(0, 0%, 100%, .382) 47%, hsla(0, 0%, 100%, .278) 56.5%, hsla(0, 0%, 100%, .194) 65%, hsla(0, 0%, 100%, .126) 73%, hsla(0, 0%, 100%, .075) 80.2%, hsla(0, 0%, 100%, .042) 86.1%, hsla(0, 0%, 100%, .021) 91%, hsla(0, 0%, 100%, .008) 95.2%, hsla(0, 0%, 100%, .002) 98.2%, hsla(0, 0%, 100%, 0))',
         'right-fade' : 'linear-gradient(270deg,#fff 0,hsla(0,0%,100%,.738) 19%,hsla(0,0%,100%,.541) 34%,hsla(0,0%,100%,.382) 47%,hsla(0,0%,100%,.278) 56.5%,hsla(0,0%,100%,.194) 65%,hsla(0,0%,100%,.126) 73%,hsla(0,0%,100%,.075) 80.2%,hsla(0,0%,100%,.042) 86.1%,hsla(0,0%,100%,.021) 91%,hsla(0,0%,100%,.008) 95.2%,hsla(0,0%,100%,.002) 98.2%,hsla(0,0%,100%,0))',
+        'bottom-gradient' : 'linear-gradient(0deg,color(display-p3 1 1 1/.1),color(display-p3 1 1 1/.1)),linear-gradient(90deg,color(display-p3 .4196 .8078 .9608),color(display-p3 1 .7216 0) 8.3%,color(display-p3 .1216 .502 .4824) 16.6%,color(display-p3 .102 .5333 .9725) 24.9%,color(display-p3 .949 .2863 0) 33.2%,color(display-p3 .5951 .587 1) 41.5%,color(display-p3 .4196 .8078 .9608) 49.8%,color(display-p3 1 .7216 0) 58.1%,color(display-p3 .1216 .502 .4824) 66.4%,color(display-p3 .102 .5333 .9725) 74.7%,color(display-p3 .949 .2863 0) 83%,color(display-p3 .5951 .587 1) 91.3%,color(display-p3 .4196 .8078 .9608))',
       },
       width:{
         'calc-100-plus-8': 'calc(100% + 8px)',

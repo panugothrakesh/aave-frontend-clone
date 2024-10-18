@@ -14,6 +14,7 @@ import Trusted_By from '@/components/Trusted_By/Trusted_by';
 import Governed_Card from '@/components/Governed_Card/Governed_Card';
 import Security from '@/components/Security/Security';
 import Faqs from '@/components/FAQs/Faqs';
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
   useEffect(() => {
@@ -46,8 +47,8 @@ export default function Home() {
           <Governed_Card/>
           <Security/>
           <Faqs/>
+          <Footer/>
         </motion.main>
-      <div className="text-lg font-regola h-[200vh] relative"></div>
     </div>
   );
 }
