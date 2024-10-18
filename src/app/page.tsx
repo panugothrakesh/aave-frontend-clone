@@ -13,6 +13,7 @@ import Aave_Everywhere from '@/components/Aave_Everywhere/Aave_Everywhere';
 import Trusted_By from '@/components/Trusted_By/Trusted_by';
 import Governed_Card from '@/components/Governed_Card/Governed_Card';
 import Security from '@/components/Security/Security';
+import Faqs from '@/components/FAQs/Faqs';
 
 export default function Home() {
   useEffect(() => {
@@ -44,6 +45,7 @@ export default function Home() {
           <Trusted_By/>
           <Governed_Card/>
           <Security/>
+          <Faqs/>
         </motion.main>
       <div className="text-lg font-regola h-[200vh] relative"></div>
     </div>
