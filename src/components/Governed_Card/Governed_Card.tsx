@@ -43,7 +43,7 @@ function Governed_Card() {
                 <a href="" className='flex items-center gap-x-[6px] mt-6 rounded-full py-3 pl-5 pr-[18px] group bg-white hover:scale-[102%]
                 shadow-[0_2px_2px_0_rgba(0,0,0,0.02)] text-[#00498b] font-inter text-base font-medium leading-[105%] -tracking-[.18px] transition-all duration-[180] ease-[cubic-bezier(.25,0,.5,1)] no-underline'>
                     Go to the Forum
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" className='block group-hover:translate-x-[.125rem] transition-all duration-[180] ease-[cubic-bezier(.25,0,.5,1)]'><path d="M3 8.5H12.5M12.5 8.5L8.5 4.5M12.5 8.5L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" className='block group-hover:translate-x-[.125rem] transition-all duration-[180] ease-[cubic-bezier(.25,0,.5,1)]'><path d="M3 8.5H12.5M12.5 8.5L8.5 4.5M12.5 8.5L8.5 12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                 </a>
                 <Goverened_Circles isInView={isInView}/>
             </div>

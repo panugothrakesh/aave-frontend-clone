@@ -102,12 +102,12 @@ const GHO_Intro = ({ isInView }: introType) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g transform-origin="324.4125px 249px">
+      <g style={{transformOrigin: "324.4125px 249px"}}>
         <motion.g 
                 initial='hidden'
                 animate='animate'
                 variants={reveal}
-        transform-origin="325px 250px">
+                style={{transformOrigin: "325px 250px"}}>
           <circle cx="325" cy="250" r="73" fill="#28D358" />
           <clipPath id="clip0_3123_123010">
             <circle cx="325" cy="250" r="73" fill="white" />

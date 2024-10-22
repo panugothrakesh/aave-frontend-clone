@@ -43,9 +43,9 @@ function Goverened_Circles({isInView}: {isInView : boolean}) {
                                 transition: {
                                 ...reveal.animate.transition,
                                 delay: 0,
-                                }}} variants={reveal} opacity="1" transform-origin="492.82183837890625px 457.1545715332031px">
+                                }}} variants={reveal} opacity="1" style={{transformOrigin: "492.82183837890625px 457.1545715332031px"}}>
                 <g transform="translate(-493, -457) scale(2)">
-                    <motion.g initial="hidden" animate="animate" variants={rotate_Inner} transform-origin="492.9109191894531px 457.07728922367096px">
+                    <motion.g initial="hidden" animate="animate" variants={rotate_Inner} style={{transformOrigin: "492.9109191894531px 457.07728922367096px"}}>
                         <circle cx="24.3086" cy="24.3086" r="24.3086" transform="matrix(-1.70552e-07 1 1 1.66646e-07 901.383 432.693)" fill="#6188C0">
                         </circle>
                         <path d="M950 457.002C950 470.427 939.117 481.31 925.691 481.31C912.266 481.31 901.383 470.427 901.383 457.002L950 457.002Z" fill="#C6DFFF">
@@ -253,9 +253,9 @@ function Goverened_Circles({isInView}: {isInView : boolean}) {
                                 transition: {
                                 ...reveal.animate.transition,
                                 delay: 0.2,
-                                }}} variants={reveal} opacity="1" transform-origin="492.7977294921875px 457.17547607421875px">
+                                }}} variants={reveal} opacity="1" style={{transformOrigin: "492.7977294921875px 457.17547607421875px"}}>
                 <g transform="translate(-626.11, -580.39) scale(2.27)">
-                    <motion.g initial="hidden" animate="animate" variants={rotate_Outer} transform-origin="492.9109191894531px 457.07728922367096px">
+                    <motion.g initial="hidden" animate="animate" variants={rotate_Outer} style={{transformOrigin: "492.9109191894531px 457.07728922367096px"}}>
                         <circle cx="24.3086" cy="24.3086" r="24.3086" transform="matrix(-1.70552e-07 1 1 1.66646e-07 901.383 432.693)" fill="#6188C0">
                         </circle>
                         <path d="M950 457.002C950 470.427 939.117 481.31 925.691 481.31C912.266 481.31 901.383 470.427 901.383 457.002L950 457.002Z" fill="#C6DFFF">

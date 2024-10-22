@@ -4,7 +4,7 @@ import App_Icon from "@/assets/svg_components/Navbar/Products/Icons/App_Icon";
 import GHO_Icon from "@/assets/svg_components/Navbar/Products/Icons/GHO_Icon";
 import { useState } from "react";
 
-const Products = ({ isHoveredProducts }: { isHoveredProducts: boolean }) => {
+const Products = ({ isHoveredProducts }: { isHoveredProducts: boolean | null }) => {
     const [isApp, setIsApp] = useState<boolean | null>(null);
     const [isGho, setIsGho] = useState<boolean | null>(null);
 
@@ -28,7 +28,12 @@ const Products = ({ isHoveredProducts }: { isHoveredProducts: boolean }) => {
 
     return (
         <div className={`absolute -top-[1px] -left-[1px] ${isHoveredProducts ? "pointer-events-auto": "pointer-events-none"}`}>
-            <div className={`menu block p-[10px] transition-all duration-300 ease-in-out ${isHoveredProducts ? "opacity-100 pointer-events-auto" : "-translate-x-20 opacity-0"}`}>
+            <div className={`menu block p-[10px] transition-all duration-300 ease-in-out
+            ${ isHoveredProducts === true ? "opacity-100 transform-none" : "" }
+            ${ isHoveredProducts === false ? "-translate-x-20 opacity-0" : "" }
+            ${ isHoveredProducts === null ? "opacity-0 transform-none" : "" }
+            
+            `}>
                 <a onMouseEnter={handleAppHover} onMouseLeave={handleMouseLeave} href="/" className={`p-4 block rounded-lg z-0 bg-[#9896ff] relative none overflow-hidden text-white transition-all duration-200 ease-in-out ${isApp === false ? "opacity-50" : "opacity-100" }`}>
                     <App_Icon />
                     <p className="mt-3 text-sm font-semibold leading-[120%] tracking-[.1px]">
