@@ -12,7 +12,6 @@ function Navbar() {
     const [isMenu, setIsMenu] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
     const [isLargeScreen, setIsLargeScreen] = useState(false);
-    // const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
     useEffect(()=>{
         if (window.innerWidth >=789){
             setIsLargeScreen(true)
@@ -51,7 +50,7 @@ function Navbar() {
 
     return (
         <>
-              <div className="header fixed z-[20000000] top-0 left-0 right-0">
+            <div className="header fixed z-[20000000] top-0 left-0 right-0">
             <header ref={sticky}
                 className={`flex bg-white justify-between items-center max-w-[1082px] mx-auto px-6 md:px-12 md:pt-6 py-1 md:pb-0 sticky top-0 z-50 transition-all duration-300 ease-in-out ${isSticky ? "shadow-navbarShadow" : ""
                     }`}>
@@ -66,21 +65,8 @@ function Navbar() {
                     <a href="/" className="relative group left-0 flex gap-1 justify-center items-center py-[9px] px-4 rounded-full text-sm font-normal font-inter tracking-[-0.09px] leading-[105%] bg-primaryHeadingGray text-white hover:opacity-80 hover:pr-8 hover:-ml-4 hover:left-2 duration-150 ease-in-out transition-all"
                     >
                         Open App
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            className="absolute right-3 opacity-0 group-hover:opacity-100"
-                        >
-                            <path
-                                d="M3 8.5H12.5M12.5 8.5L8.5 4.5M12.5 8.5L8.5 12.5"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            ></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" className="absolute right-3 opacity-0 group-hover:opacity-100">
+                            <path d="M3 8.5H12.5M12.5 8.5L8.5 4.5M12.5 8.5L8.5 12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                         </svg>
                     </a>
                 </div>
@@ -96,6 +82,7 @@ function Navbar() {
                 </button>
 
             </header>
+
             <div className={`block md:hidden z-[9999999] fixed inset-0 top-16 overflow-y-scroll px-3 pt-6 pb-16 bg-white duration-200 ease ${isMenu ? "pointer-events-auto opacity-100": "pointer-events-none opacity-0"}`}>
                 <div className={`block md:hidden duration-300 ease ${isMenu ? "transform-none" : "scale-[0.98] origin-[50%_80%]"}`}>
                     <div>

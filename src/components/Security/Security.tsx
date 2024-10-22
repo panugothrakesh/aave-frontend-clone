@@ -39,7 +39,7 @@ function Security() {
                             <p className='font-inter text-base leading-[150%] -tracking-[.18px] text-primaryParagraph'>
                                 Peace of mind supported by multiple audits by the world&apos;s leading security firms.
                             </p>
-                            <BarButton className='mt-0 mb-0'>
+                            <BarButton href='https://aave.com/security' className='mt-0 mb-0'>
                                 Learn More
                             </BarButton>
                         </div>
@@ -53,7 +53,7 @@ function Security() {
                             <p className='font-inter text-base leading-[150%] -tracking-[.18px] text-primaryParagraph'>
                                 Security is a top priority. Report vulnerabilities or bugs responsibly and get rewarded.
                             </p>
-                            <BarButton className='mt-0 mb-0'>
+                            <BarButton href='https://immunefi.com/bug-bounty/aave/' className='mt-0 mb-0'>
                                 Learn More
                             </BarButton>
                         </div>
@@ -73,7 +73,7 @@ function Security() {
                             <p className='font-inter text-base leading-[150%] -tracking-[.18px] text-primaryParagraph'>
                                 The Aave Protocol is secured with a backstop against protocol insolvency.
                             </p>
-                            <BarButton className='mt-0 mb-0'>
+                            <BarButton href='https://aave.com/help/safety-module' className='mt-0 mb-0'>
                                 Learn More
                             </BarButton>
                         </div>

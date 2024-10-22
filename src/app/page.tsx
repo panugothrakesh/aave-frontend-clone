@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect } from 'react';
-import Lenis from 'lenis';
 import Navbar from '@/components/Navbar/navbar';
 import Hero from '@/components/Hero/hero';
 import Meet from '@/components/Meet/Meet';
@@ -17,15 +15,7 @@ import Faqs from '@/components/FAQs/Faqs';
 import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time: DOMHighResTimeStamp) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    return () => lenis.destroy();
-  }, []);
+
   const pageload={
     hidden:{opacity:0},
     visible:{opacity:1,
