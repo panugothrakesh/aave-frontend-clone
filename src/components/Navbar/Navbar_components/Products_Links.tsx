@@ -1,7 +1,7 @@
-import App_Bg from '@/assets/svg_components/Navbar/Products/Background/App_Bg'
-import GHO_Bg from '@/assets/svg_components/Navbar/Products/Background/GHO_Bg'
+import App_Bg from '@/assets/svg_components/Navbar/Products/Background/SmallScreen/App_Bg'
 import App_Icon from '@/assets/svg_components/Navbar/Products/Icons/App_Icon'
 import GHO_Icon from '@/assets/svg_components/Navbar/Products/Icons/GHO_Icon'
+import GHO_bg from '@/assets/svg_components/Navbar/Products/Background/SmallScreen/GHO_bg'
 
 function Products_Links() {
     return (
@@ -24,7 +24,7 @@ function Products_Links() {
                 <p className="relative z-[2] mt-.5 text-sm font-normal leading-[150%] --tracking-[.09px]">
                     The Aave-native stablecoin.
                 </p>
-                <GHO_Bg />
+                <GHO_bg />
             </a>
         </>
     )
