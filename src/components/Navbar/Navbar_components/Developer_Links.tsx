@@ -1,6 +1,6 @@
-import Bug_Bounty_Icon from '@/assets/svg_components/Navbar/Developers/Icons/Bug_Bounty_Icon'
-import Documentation_Icon from '@/assets/svg_components/Navbar/Developers/Icons/Documentation_Icon'
-import Security_Icon from '@/assets/svg_components/Navbar/Developers/Icons/Security_Icon'
+import Bug_Bounty_Icon from '@/assets/svg_components/Navbar/Developers/Icons/SmallScreen/Bug_Bounty_Icon'
+import Documentation_Icon from '@/assets/svg_components/Navbar/Developers/Icons/SmallScreen/Documentation_Icon'
+import Security_Icon from '@/assets/svg_components/Navbar/Developers/Icons/SmallScreen/Security_Icon'
 import React from 'react'
 
 function Developers_Links() {

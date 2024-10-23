@@ -1,7 +1,7 @@
-import Brand_Icon from '@/assets/svg_components/Navbar/Resources/Icons/Brand_Icon'
-import FAQ_Icon from '@/assets/svg_components/Navbar/Resources/Icons/FAQ_Icon'
-import Governance_Icon from '@/assets/svg_components/Navbar/Resources/Icons/Governance_Icon'
-import HelpNSupport_Icon from '@/assets/svg_components/Navbar/Resources/Icons/HelpNSupport_Icon'
+import Brand_Icon from '@/assets/svg_components/Navbar/Resources/Icons/SmallScreen/Brand_Icon'
+import FAQ_Icon from '@/assets/svg_components/Navbar/Resources/Icons/SmallScreen/FAQ_Icon'
+import Governance_Icon from '@/assets/svg_components/Navbar/Resources/Icons/SmallScreen/Governance_Icon'
+import HelpNSupport_Icon from '@/assets/svg_components/Navbar/Resources/Icons/SmallScreen/HelpNSupport_Icon'
 import React from 'react'
 
 function Resources_Links() {
